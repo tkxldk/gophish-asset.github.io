@@ -13,15 +13,18 @@
           <h1>You've been</h1>
           <h2>HACKED!</h2>
           <iframe src="https://giphy.com/embed/eImrJKnOmuBDmqXNUj" width="320" height="140" frameborder="0" margin-bottom="10px"></iframe>
+          <br />
+          <br />
           <p>Phising ini tidak berbahaya dan merupakan bagian dari BCA Finance.</p>
           <p>Ayo tingkatkan kewaspadaan terhadap serangan siber!</p>
+          <button onclick="playAudio()">Play Alarm</button>
         </section>
       </main>
     </div>
-    <audio autoplay loop>
-        <source src="https://tkxldk.github.io/gophish-asset.github.io/Alarm.ogg" type="audio/ogg" />
-        <source src="https://tkxldk.github.io/gophish-asset.github.io/Alarm.mp3" type="audio/mpeg" />
-      </audio>
+    <audio id="alarm">
+      <source src="https://tkxldk.github.io/gophish-asset.github.io/Alarm.ogg" type="audio/ogg" />
+      <source src="https://tkxldk.github.io/gophish-asset.github.io/Alarm.mp3" type="audio/mpeg" />
+    </audio>
   </body>
 
   <style>
@@ -64,5 +67,46 @@
     p {
       color: #f0f0f0;
     }
+    button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: white;
+      background-color: #ff5555;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 20px 0;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background-color: #ff2e2e;
+    }
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 0 20px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 40px;
+      }
+      .message-box {
+        padding: 10px;
+        width: 80%;
+        margin: auto;
+      }
+    }
   </style>
+
+  <script>
+    function playAudio() {
+      var audio = document.getElementById("alarm");
+      audio.play();
+    }
+  </script>
 </html>
