@@ -11,6 +11,7 @@
         box-sizing: border-box;
       }
       body {
+        width: 100vw;
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -19,6 +20,7 @@
         background-size: cover;
         background-position: center;
         font-family: Arial, sans-serif;
+        animation: zoomIn 0.3s infinite;
       }
       .message-box {
         padding: 20px;
@@ -27,6 +29,17 @@
         text-align: center;
         border-radius: 10px;
         font-size: 24px;
+      }
+      @keyframes zoomIn {
+        0% {
+          background-size: 80%;
+        }
+        50% {
+          background-size: 50%;
+        }
+        100% {
+          background-size: 120%;
+        }
       }
     </style>
   </head>
